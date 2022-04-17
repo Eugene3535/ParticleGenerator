@@ -6,6 +6,27 @@
 
 #include <xstddef>
 
+// External random generators
+
+constexpr float inv_rand_max = 1.0f / RAND_MAX;
+
+float frand(float min, float max)
+{
+	float fval = static_cast<float>(rand());
+
+	return (fval * inv_rand_max * (max - min) + min);
+}
+
+float frand(float bound)
+{
+	return frand(-bound, bound);
+}
+
+sf::Vector2f rand2f(const sf::Vector2f& factors)
+{
+	return sf::Vector2f(frand(factors.x), frand(factors.y));
+}
+
 ParticleSystem::ParticleSystem() :
 	m_particle_size(32.0f, 32.0f), // Default size is 32x32 pixels
 	m_velocity(0.0f),
