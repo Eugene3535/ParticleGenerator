@@ -67,15 +67,15 @@ public:
 	// parameter: new dispersion, as sf::Angle
 	// 
 	// Usage example:
-    // code:
-    // 
+        // code:
+        // 
 	// system.setDirection(sf::degrees(0.0f));
-    // system.setDispersion(sf::degrees(90.0f));
+        // system.setDispersion(sf::degrees(90.0f));
 	// 
 	// end code.
 	// 
 	// Now direction of each respawned particle
-	// will be in range -45 ... 45 degrees
+	// will be in range 315 ... 45 degrees
 	// 
 	// See sf::Angle, getDispersion
 	void setDispersion(sf::Angle dispersion);
