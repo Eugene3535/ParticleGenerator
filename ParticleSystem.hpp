@@ -1,4 +1,4 @@
-#include "Sprite.hpp"
+#include <SFML/Graphics.hpp>
 
 #include <list>
 #include <memory>
